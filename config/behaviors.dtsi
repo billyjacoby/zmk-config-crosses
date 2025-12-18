@@ -1,0 +1,124 @@
+/ {
+    behaviors {
+        ht_tp_l1: hold_tap_layer_1 {
+        compatible = "zmk,behavior-hold-tap";
+        label = "HOLD_TAP_LAYER_1";
+        #binding-cells = <2>;
+        flavor = "tap-preferred";
+        tapping-term-ms = <200>;
+        quick-tap-ms = <125>;
+        global-quick-tap;
+        bindings = <&macro_layer1_pause_release &kp>;
+    };
+
+    ht_tp_l2: hold_tap_layer_2 {
+        compatible = "zmk,behavior-hold-tap";
+        label = "HOLD_TAP_LAYER_2";
+        #binding-cells = <2>;
+        flavor = "tap-preferred";
+        tapping-term-ms = <200>;
+        quick-tap-ms = <125>;
+        global-quick-tap;
+        bindings = <&macro_layer2_pause_release &kp>;
+    };
+
+    td_ctrl_opt: tap_dance_control_option {
+        compatible = "zmk,behavior-tap-dance";
+        label = "TAP_DANCE_CONTROL_OPTION";
+        #binding-cells = <0>;
+        tapping-term-ms = <200>;
+        bindings = <&kp LEFT_CONTROL>, <&kp LEFT_ALT>;
+    };
+
+    td_arrow_function: tap_dance_arrow_function {
+        compatible = "zmk,behavior-tap-dance";
+        label = "TAP_DANCE_ARROW_FUNCTION";
+        #binding-cells = <0>;
+        tapping-term-ms = <200>;
+        bindings = <&kp SEMI>, <&macro_arrow_function>;
+    };
+
+    td_brackets_open: tap_dance_brackets_open {
+        compatible = "zmk,behavior-tap-dance";
+        label = "TAP_DANCE_BRACKETS_OPEN";
+        #binding-cells = <0>;
+        tapping-term-ms = <200>;
+        bindings = <&kp LEFT_BRACE>, <&kp LBKT>, <&kp LEFT_PARENTHESIS>;
+    };
+
+    td_brackets_close: tap_dance_brackets_close {
+        compatible = "zmk,behavior-tap-dance";
+        label = "TAP_DANCE_BRACKETS_CLOSE";
+        #binding-cells = <0>;
+        tapping-term-ms = <200>;
+        bindings = <&kp RIGHT_BRACE>, <&kp RBKT>, <&kp RIGHT_PARENTHESIS>;
+    };
+
+    arrow_func_full: arrow_func_full {
+        compatible = "zmk,behavior-tap-dance";
+        label = "ARROW_FUNC_FULL";
+        #binding-cells = <0>;
+        bindings = <&macro_arrow_function>, <&arrow_functions>;
+
+        tapping-term-ms = <400>;
+    };
+
+    dbl_tap_hold: dbl_tap_hold {
+        compatible = "zmk,behavior-tap-dance";
+        label = "DBL_TAP_HOLD";
+        #binding-cells = <0>;
+        bindings = <&lt 2 ENTER>, <&lt 5 ENTER>;
+    };
+
+    td_opt_tog: td_opt_tog {
+        compatible = "zmk,behavior-tap-dance";
+        label = "TD_OPT_TOG";
+        #binding-cells = <0>;
+        bindings = <&kp LEFT_ALT>, <&kt LALT>;
+    };
+
+    td_quote_grave: td_quote_grave {
+        compatible = "zmk,behavior-tap-dance";
+        label = "TD_QUOTE_GRAVE";
+        #binding-cells = <0>;
+        bindings = <&kp SINGLE_QUOTE>, <&kp DOUBLE_QUOTES>, <&kp GRAVE>;
+
+        tapping-term-ms = <150>;
+    };
+
+    td_ctrl_tog: td_ctrl_tog {
+        compatible = "zmk,behavior-tap-dance";
+        label = "TD_CTRL_TOG";
+        #binding-cells = <0>;
+        bindings = <&kp LEFT_CONTROL>, <&kt LCTRL>;
+    };
+
+    td_cmd_tog: td_cmd_tog {
+        compatible = "zmk,behavior-tap-dance";
+        label = "TD_CMD_TOG";
+        #binding-cells = <0>;
+        bindings = <&kp LGUI>, <&kt LGUI>;
+    };
+
+    mouse_cmd_tap: mouse_cmd_tap {
+        compatible = "zmk,behavior-hold-tap";
+        label = "MOUSE_CMD_TAP";
+        #binding-cells = <2>;
+        flavor = "balanced";
+        tapping-term-ms = <200>;
+        quick-tap-ms = <125>;
+        bindings = <&kp>, <&mkp>;
+    };
+
+    mouse_cmd_tap_r: mouse_cmd_tap_r {
+        compatible = "zmk,behavior-hold-tap";
+        label = "MOUSE_CMD_TAP_R";
+        #binding-cells = <2>;
+        flavor = "balanced";
+        tapping-term-ms = <200>;
+        quick-tap-ms = <125>;
+            bindings = <&kp>, <&mkp>;
+        };
+    };
+};
+

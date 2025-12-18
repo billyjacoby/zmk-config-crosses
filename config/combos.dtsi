@@ -1,0 +1,80 @@
+/ {
+    combos {
+        compatible = "zmk,combos";
+
+    raycast {
+        bindings = <&macro_cmd_space>;
+        key-positions = <53 42>;
+        layers = <0 3 1 2>;
+    };
+
+    esc {
+        bindings = <&kp ESC>;
+        key-positions = <1 2>;
+        layers = <0 1 2 3 5 4>;
+    };
+
+    shift {
+        bindings = <&kp LEFT_SHIFT>;
+        key-positions = <13 14>;
+        layers = <0 1 2 3 5 4>;
+    };
+
+    tab {
+        bindings = <&kp TAB>;
+        key-positions = <25 26>;
+        layers = <3 2 1 0 4 5>;
+    };
+
+    bkspc {
+        bindings = <&kp BACKSPACE>;
+        key-positions = <10 9>;
+    };
+
+    quote {
+        bindings = <&kp SINGLE_QUOTE>;
+        key-positions = <22 21>;
+    };
+
+    minus {
+        bindings = <&kp MINUS>;
+        key-positions = <34 33>;
+    };
+
+    hr_tab {
+        bindings = <&kp TAB>;
+        key-positions = <16 15>;
+    };
+
+    fg_lclick {
+        bindings = <&mkp LCLK>;
+        key-positions = <16 17>;
+        layers = <3 2 1 0 4 5>;
+    };
+
+    hj_lclick {
+        bindings = <&mkp LCLK>;
+        key-positions = <18 19>;
+        layers = <3 2 1 0 4 5>;
+    };
+
+    jk_rclick {
+        bindings = <&mkp RCLK>;
+        key-positions = <19 20>;
+        layers = <3 2 1 0 4 5>;
+    };
+
+    mouse_back {
+        bindings = <&mkp MB4>;
+        key-positions = <30 31>;
+        layers = <3 2 1 0 4 5>;
+    };
+
+    mouse_forward {
+        bindings = <&mkp MB5>;
+        key-positions = <31 32>;
+        layers = <3 2 1 0 4 5>;
+        };
+    };
+};
+
