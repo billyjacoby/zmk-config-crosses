@@ -407,3 +407,9 @@
         };
     };
 };
+
+&trackball_central {
+    cpi = <500>;
+    /delete-property/ x-invert;
+    /delete-property/ y-invert;
+};
